@@ -1,7 +1,7 @@
 # Part1. Vue 시작하기
 # ch01-01. Vue 개요 - 인사말
 ## 1. 공식문서  
-https://vuejs.org
+https://vuejs.org  
 https://v2.ko.vuejs.org/v2/guide/
 
 
@@ -14,8 +14,7 @@ https://nodejs.org/en
 > 설치는 짝수 버전, 홀수는 최신 버전에서 실험하는 버전
 >> node -v, npm -v
 - cf node: v12.22.12, npm: 6.14.18
-> 
-
+> (nvm)node: v12.22.12, npm: 6.14.16
 ## 3. 직접설치, 패키지설치(homebrew)
 ## 4. 버전관리 - NVM, n
 ### NVM
