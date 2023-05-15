@@ -257,9 +257,8 @@ var app = new Vue(...)
 		</todo-item>
 	</ol>
 </div>
-````
-> 컴포넌트 태그는 보통 '-'이 붙는다 ex) app-nav
 ```
+> 컴포넌트 태그는 보통 '-'이 붙는다 ex) app-nav
 
 ##  ch02-05. Vue 시작하기 - 컴포넌트를 사용한 작성방법 - 2
 ### HTML
