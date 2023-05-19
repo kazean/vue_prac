@@ -8,6 +8,7 @@ https://v2.ko.vuejs.org/v2/guide/
 # ch01-02. NodeJS 설치
 ## 참고 문서
 https://heropy.blog/2018/02/17/node-js-install/
+
 ## 1. 처음 시작하는 Node.js 개발 - 설치 및 버전(NVM, n)
 ## 2. 공식 사이트
 https://nodejs.org/en
@@ -97,7 +98,7 @@ var app new Vue({
 - 텍스트 보간 이외에도 다른 엘리먼트 속성을 바인딩
 ```
 <div id="app-2>
-	<span v-bind:title="message>
+	<span v-bind:title="message">
 		내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다.
 	</span>
 </div>
@@ -224,7 +225,7 @@ var app6 = new Vue({
 ```
 
 # ch02-04. Vue 시작하기 - 컴포넌트를 사용한 작성방법 - 1
-## 컴포넌틀르 사용한 작성방법
+## 컴포넌트를 사용한 작성방법
 컴포넌트 시스템은 Vue의 또 다른 중요한 개념입니다: 부분의 개념, 재사용, 모든 응용 프로그램 인터페이스를 컴포넌트 트리로 추상화
 ```
 Vue.component('todo-item', {
@@ -233,11 +234,13 @@ Vue.component('todo-item', {
 
 var app = new Vue(...)
 ```
+
 ```
 <ol>
 	<todo-tiem></todo-item>
 </ol>
 ```
+
 - 부모 영역의 데이터를 자식 컴포넌트에 집어넣을 수 있는 기능, prop
 ```
 Vue.component('todo-item', {
@@ -247,6 +250,7 @@ Vue.component('todo-item', {
 
 var app = new Vue(...)
 ```
+
 ```
 <div id="app-7">
 	<ol>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app1">
+        <my-component />
+    </div>
+    <div id="app2">
+        <my-comp />
+    </div>
+    <script>
+        /*
+        Vue.component('my-component', {
+            template: '<div class="me">{{ message }}</div>',
+            data: function () {
+                return {
+                    message: 'Hello Vue!'
+                }
+            }
+        })
+        */
+
+        const myComp = {
+            template: '<div class="me">{{ message }}</div>',
+            data: function () {
+                return {
+                    message: 'Hello Vue!'
+                }
+            }
+        }
+
+        const vm1 = new Vue({
+            el: '#app1',
+            components: {
+                'my-component': myComp
+            }
+        })
+
+        const vm2 = new Vue({
+            el: '#app2',
+            components: {
+                myComp
+            }
+        })
+    </script>
+</body>
+</html>

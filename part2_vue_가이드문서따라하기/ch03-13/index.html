@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="pushTodo">Push</button>
+        <ul class="todos">
+            <li v-for="(todo, index) in todos"
+                :key="index">
+                {{todo.title}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                todos: [
+                    { title: '아침 먹기' },
+                    { title: '점심 먹기' },
+                    { title: '저녁 먹기' }
+                ]
+            },
+            methods: {
+                pushTodo () {
+                    // this.todos[3] = { title: '야식먹기' }
+                    this.todos.push({ title: '야식 먹기' })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

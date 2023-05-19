@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+        .child {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <div id="app">
+        <div class="parent" @click.self="clickHandler">
+            <div class="child"></div>
+        </div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            methods: {
+                clickHandler (event) {
+                    console.log(event.currentTarget.className)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

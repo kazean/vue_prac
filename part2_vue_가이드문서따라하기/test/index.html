@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-comp>
+            <template slot="slot1" slot-scope="myProp">
+                {{ myProp.myPropData }}
+            </template>
+        </my-comp>
+    </div>
+    <script>
+        Vue.component('my-comp', {
+            template: '<div><slot name="slot1" my-Prop-data="Hello Slot~">대체 컨텐츠</slot></div>'
+        })
+        const vm = new Vue({
+            el: '#app'
+        })
+    </script>
+</body>
+</html>
