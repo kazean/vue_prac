@@ -510,7 +510,7 @@ const vm1 = new Vue({
 <div id="app1">
 	<my-component />
 </div>
-``` ㅇ
+```
 
 - 캐밥 to 카멜
 ```
