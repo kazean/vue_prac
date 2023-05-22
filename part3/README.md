@@ -12,7 +12,7 @@ template 속성을 파일로 관리하는 방법
 ### Vue Loader는 무엇인가요
 다음과 같이 작성된 Vue컴포넌트를 자바스크립트 모듈로 변환할 수 있는 webpack에서 사용하는 로더
 ### webpack이 무엇인가요?
-모듈의 몪음, 각 파일을 모듈로 간주(프로젝트 구조)하고 파일 간 종속성을 파악한 다음 정적 Asset(결과물)로 묶어서 배포
+모듈의 묶음, 각 파일을 모듈로 간주(프로젝트 구조)하고 파일 간 종속성을 파악한 다음 정적 Asset(결과물)로 묶어서 배포
 ### Vue 컴포넌트 스팩
 *.vue 파일: html과 같은 문법을 사용하여 컴포넌트 작성
 - 3가지 유형의 최상위 language block
@@ -330,6 +330,8 @@ $ npm i -D copy-webpack-plugin@5.1.1
 favicon 파일을 복사해서 배포용으로 삽입하기 위함
 - webpack.config.js
 ```
+const CopyPlugin = require('copy-webpack-plugin')
+
     plugins: [
 		new CopyPlugin([
 			{
@@ -393,7 +395,7 @@ devServer: {
 devtool: 'eval'
 ```
 > eval: 디버깅 가능하게 빌드하며 빠르게 빌드, 용량이 크고 최적화가 안되있음  
-devltoo: 'cheap-module-source-map', 용량이 적어지고 최적화가 잘됨, 디버깅 안되고 빌드가 길어짐
+devltool: 'cheap-module-source-map', 용량이 적어지고 최적화가 잘됨, 디버깅 안되고 빌드가 길어짐
 >> 개발용, 제품용 모듈 설정하는 방법?
 
 
@@ -479,7 +481,7 @@ h1 {
 }
 </style>
 ```
-## 후처리기 설치 - 며새
+## 후처리기 설치 - autoprefixer, postcss-loader
 ```
 $ npm i -D autoprefixer postcss-loader
 # or
