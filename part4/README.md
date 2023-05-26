@@ -341,7 +341,7 @@ import dayjs from 'dayjs'
       if (isSame) {
         return date.format('YYYY년 MM월 DD일')
       } else {
-        return `date.format('YYYY년 MM월 DD일') (edited)`
+        return `${date.format('YYYY년 MM월 DD일')} (edited)`
       }
     }
 ```
