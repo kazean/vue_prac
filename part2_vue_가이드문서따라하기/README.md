@@ -372,7 +372,7 @@ clickMethod(title, event) {
 
 
 ## ch03-17. 이벤트 핸들링 - 이벤트 수식어
-이벤트 핸들러 내부에 event.prevetnDefault() 또는 event.stopPropagation()를 호출하는 것은 매우 보편적인 일입니다  
+이벤트 핸들러 내부에 event.preventDefault() 또는 event.stopPropagation()를 호출하는 것은 매우 보편적인 일입니다  
 메소드 내에서 이 작업을 쉽게 할 수 있지만, 데이터 로직만 처리하기 위해서 v-on 이벤트에 이벤트 수식어를 제공 합니다
 - .stop .prevent .capture .self .once .passive
 ```
