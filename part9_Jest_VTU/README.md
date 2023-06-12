@@ -829,29 +829,6 @@ const localVue = createLocalVue()
 localVue.use(Vuetify)
 
 describe('MovieList Component', () => {
-  let wrapper
-  beforeEach(() => {
-    wrapper = shallowMount(MovieList, {
-      localVue,
-      mocks: {
-        $store: {
-          state: {
-            movie: {
-              movies: [
-                {
-                  imdbID: '123456',
-                  Title: '영화 제목',
-                  Poster: 'image.jpg',
-                  Year: '2020'
-                }
-              ]
-            }
-          }
-        }
-      }
-    })
-  })
-
   test('영화 제목 출력', () => {
     console.log(wrapper.html())
     expect(wrapper.find('v-card-title-stub').text()).toBe('영화 제목')
@@ -942,6 +919,7 @@ describe('SearchBar Component', () => {
 ```
 > package.json
 >> "test": "jest --watchAll --transformIgnorePatterns \"node_modules/(?!axios)/\""
+
 # Ch05-26. 예제3 - SearchBar Component test2
 ## SearchBar.test.js
 ```
