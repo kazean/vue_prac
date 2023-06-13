@@ -1118,7 +1118,7 @@ axios.get.mockResolvedValue({
 
 axios.get.mockRejectedValue(new Error('Network Error!'))
 ```
-> axios.get.mockResolved()/mockRejectedValue()
+> axios.get.mockResolvedValue()/mockRejectedValue()
 ## store/movie.js
 ```
 state: () => ({
